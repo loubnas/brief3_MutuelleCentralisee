@@ -5,10 +5,22 @@ public class Client {
     private String dateStartWork;
     private String firstName;
     private String lastName;
-    private String cin;
+    private String cinpass;
     private String phone;
     private String email;
     private String adress;
+
+    // Constructeur :
+    public Client(String nameCompany, String dateStartWork, String firstName, String lastName, String cinpass, String phone, String email, String adress) {
+        this.nameCompany = nameCompany;
+        this.dateStartWork = dateStartWork;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.cinpass = cinpass;
+        this.phone = phone;
+        this.email = email;
+        this.adress = adress;
+    }
 
     // Getters & Setters :
 
@@ -20,8 +32,8 @@ public class Client {
     public void setFirstName(String firstName) {this.firstName = firstName;}
     public String getLastName() {return lastName;}
     public void setLastName(String lastName) {this.lastName = lastName;}
-    public String getCin() {return cin;}
-    public void setCin(String cin) {this.cin = cin;}
+    public String getCinpass() {return cinpass;}
+    public void setCinpass(String cinpass) {this.cinpass = cinpass;}
     public String getPhone() {return phone;}
     public void setPhone(String phone) {this.phone = phone;}
     public String getEmail() {return email;}
@@ -30,17 +42,7 @@ public class Client {
     public void setAdress(String adress) {this.adress = adress;}
 
 
-    // Constructeur :
-    public Client(String nameCompany, String dateStartWork, String firstName, String lastName, String cin, String phone, String email, String adress) {
-        this.nameCompany = nameCompany;
-        this.dateStartWork = dateStartWork;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.cin = cin;
-        this.phone = phone;
-        this.email = email;
-        this.adress = adress;
-    }
+
 
 
 
