@@ -121,7 +121,7 @@ public class homeController implements Initializable {
 
 
         if(!validationHelper.IsValidLength(lastName.getText(),50)){
-            alertHelper.ShowError("Erreur de validation", "Longueur incorrect.", "champ nameCompany.");
+            alertHelper.ShowError("Erreur de validation", "Longueur incorrect.", "champ last name.");
             return  false;
         }
 
