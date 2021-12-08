@@ -11,6 +11,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -28,11 +29,14 @@
                               <DatePicker fx:id="dateStartWork" layoutX="359.0" layoutY="95.0" opacity="0.45" prefHeight="27.0" prefWidth="184.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
                               <TextField fx:id="firstName" layoutX="77.0" layoutY="157.0" opacity="0.45" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
                               <TextField fx:id="lastName" layoutX="358.0" layoutY="157.0" opacity="0.45" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
-                              <RadioButton fx:id="cin" layoutX="79.0" layoutY="210.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" opacity="0.45" prefHeight="19.0" prefWidth="48.0" style="-fx-background-color: transparent;" text="CIN">
+                              <RadioButton fx:id="cin" layoutX="79.0" layoutY="210.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" opacity="0.45" prefHeight="19.0" prefWidth="48.0" selected="true" style="-fx-background-color: transparent;" text="CIN">
                                  <font>
                                     <Font name="Arial" size="11.0" />
-                                 </font></RadioButton>
-                              <RadioButton fx:id="pass" layoutX="138.0" layoutY="211.0" mnemonicParsing="false" opacity="0.45" prefHeight="17.0" prefWidth="77.0" text="Passport">
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="identity" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="pass" layoutX="138.0" layoutY="211.0" mnemonicParsing="false" opacity="0.45" prefHeight="17.0" prefWidth="77.0" text="Passport" toggleGroup="$identity">
                                  <font>
                                     <Font name="Arial" size="11.0" />
                                  </font></RadioButton>

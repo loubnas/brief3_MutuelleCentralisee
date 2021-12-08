@@ -45,6 +45,7 @@ public class homeController implements Initializable {
     @FXML private TextField phone;
     @FXML private TextField email;
     @FXML private TextArea adress;
+    @FXML private ToggleGroup identity;
 
     private ObservableList<Client> clients;
     private List<CountryCode> countryCodes;
@@ -85,11 +86,16 @@ public class homeController implements Initializable {
     @FXML
     private void addClientClick(ActionEvent event) {
 
+        RadioButton selectedRadioButton = (RadioButton) identity.getSelectedToggle();
+        String toogleGroupValue = selectedRadioButton.getText();
+
+
+
         // Verification des données avant l'ajout du client - erreur en cas de non validité
         if(Validation()) {
 
             // L'ajout du client
-            Client c = new Client(nameCompany.getText(), dateStartWork.getEditor().getText(), firstName.getText(), lastName.getText(), cinpass.getText(), phoneCode.getEditor().getText() + phone.getText(), email.getText(), adress.getText());
+            Client c = new Client(nameCompany.getText(), dateStartWork.getEditor().getText(), firstName.getText(), lastName.getText(), cinpass.getText(), phoneCode.getSelectionModel().getSelectedItem() +"-"+ phone.getText(), email.getText(), adress.getText());
             clients.add(c);
 
             // Message d'ajout :

@@ -8,6 +8,15 @@
 "password" : "1230321",
 "entity" : "OMFAM"
 },
+  {
+    "firstname": "Loubna",
+    "lastname": "SOUSSI",
+    "cin": "HH111111",
+    "phone" : "+212611111111",
+    "email" : "loubnasoussi@gmail.com",
+    "password" : "111",
+    "entity" : "YC"
+  },
 {
 "firstname": "Kamal",
 "lastname": "Bouhfid",
