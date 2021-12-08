@@ -41,7 +41,7 @@
                                     <Font name="Arial" size="11.0" />
                                  </font></RadioButton>
                                <TextField fx:id="email" layoutX="76.0" layoutY="286.0" opacity="0.45" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
-                              <TextArea fx:id="adress" layoutX="359.0" layoutY="273.0" opacity="0.45" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+                              <TextArea fx:id="adress" layoutX="359.0" layoutY="273.0" opacity="0.45" prefHeight="39.0" prefWidth="190.0" promptText="Adress" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
                               <ComboBox fx:id="phoneCode" layoutX="359.0" layoutY="225.0" opacity="0.45" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;">
                                 <items>
 
@@ -92,10 +92,6 @@
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="361.0" layoutY="278.0" opacity="0.47" text="Adress">
-                                 <font>
-                                    <Font name="Arial" size="12.0" />
-                                 </font></Label>
                               <TextField fx:id="phone" layoutX="424.0" layoutY="225.0" opacity="0.45" prefHeight="27.0" prefWidth="117.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
                            </children></AnchorPane>
                      </children></AnchorPane>
