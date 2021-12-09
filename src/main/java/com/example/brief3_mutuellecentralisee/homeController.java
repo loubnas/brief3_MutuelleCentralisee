@@ -99,7 +99,7 @@ public class homeController implements Initializable {
             clients.add(c);
 
             // Message d'ajout :
-            alertHelper.ShowSuccess("OK", "Client ajouter", "");
+            alertHelper.ShowSuccess("OK", "Client ajouter", "Client ajouter avec success");
             // Reset les valeurs des controls apres l'ajout
             nameCompany.setText("");
             dateStartWork.setValue(null);
@@ -155,7 +155,24 @@ public class homeController implements Initializable {
             return  false;
         }
 
+        // Champs vide :
+       if(!validationHelper.IsNotEmpty(nameCompany.getText())){
+           alertHelper.ShowError("Erreur de validation","champ vide","Enter name Comapany ( more than 3 letters )");
+           return  false;
+       }
+        if(!validationHelper.IsNotEmpty(firstName.getText())){
+            alertHelper.ShowError("Erreur de validation","champ vide","Enter first name ( more than 3 letters )");
+            return  false;
+        }
+        if(!validationHelper.IsNotEmpty(lastName.getText())){
+            alertHelper.ShowError("Erreur de validation","champ vide","Enter last name ( more than 3 letters )");
+            return  false;
+        }
 
+        if(!validationHelper.IsNotEmpty(adress.getText())){
+            alertHelper.ShowError("Erreur de validation","champ vide","Enter your adress  ( more than 3 letters )");
+            return  false;
+        }
 
         return true;
     }

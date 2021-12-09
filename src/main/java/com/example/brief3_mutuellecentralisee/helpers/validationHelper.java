@@ -25,4 +25,8 @@ public class validationHelper {
     public static boolean IsValidEmail(String value){
         return value.matches("^[a-zA-Z_][a-zA-Z0-9_]+@[a-zA-Z_][a-zA-Z0-9_]+\\.[a-zA-Z]{2,3}$");
     }
+
+    public static boolean IsNotEmpty(String value){
+        return value.matches("^[a-zA-Z][a-zA-Z]{2,49}$");
+    }
 }

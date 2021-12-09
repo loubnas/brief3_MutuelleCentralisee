@@ -44,6 +44,8 @@ public class loginController implements Initializable {
                 if(u.getEmail().equals(user) && u.getPassword().equals(pass)){
                     System.out.println("connecter");
                     connected=true;
+                    //alertHelper.ShowSuccess("Success","Success connexion"," Success login et password");
+
 
                     // Ouvrir la nouvelle fenetre
                     FXMLLoader fxmlLoader = new FXMLLoader(application.class.getResource("home-view.fxml"));
