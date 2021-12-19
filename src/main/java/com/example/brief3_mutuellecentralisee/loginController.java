@@ -1,5 +1,6 @@
 package com.example.brief3_mutuellecentralisee;
 
+import com.example.brief3_mutuellecentralisee.dao.implimentation.UsersImp;
 import com.example.brief3_mutuellecentralisee.helpers.alertHelper;
 import com.example.brief3_mutuellecentralisee.helpers.fileHelper;
 import com.example.brief3_mutuellecentralisee.helpers.jsonHelper;
@@ -21,6 +22,9 @@ public class loginController implements Initializable {
     @FXML private TextField username;
     @FXML private TextField password;
 
+    private UsersImp UIMP=new UsersImp();
+
+
     public void setParentStage(Stage parentStage) {
         this.parentStage = parentStage;
     }
@@ -39,23 +43,14 @@ public class loginController implements Initializable {
 
             boolean connected=false;
 
-            List<User> users= jsonHelper.GetUsersList();
-            for(User u: users){
-                if(u.getEmail().equals(user) && u.getPassword().equals(pass)){
-                    System.out.println("connecter");
-                    connected=true;
-                    //alertHelper.ShowSuccess("Success","Success connexion"," Success login et password");
-
-
-                    // Ouvrir la nouvelle fenetre
-                    FXMLLoader fxmlLoader = new FXMLLoader(application.class.getResource("home-view.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-                    this.parentStage.setScene(scene);
-                    this.parentStage.setTitle("Home");
-
-                }
+            User u=UIMP.Connect(user,pass);
+            if(u!=null){
+                FXMLLoader fxmlLoader = new FXMLLoader(application.class.getResource("home-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+                this.parentStage.setScene(scene);
+                this.parentStage.setTitle("Home");
             }
-            if(!connected){
+            else{
                 System.out.println("Erreur Connexion");
                 alertHelper.ShowError("Erreur","Erreur de connexion","login ou mot de passe incorrect");
             }

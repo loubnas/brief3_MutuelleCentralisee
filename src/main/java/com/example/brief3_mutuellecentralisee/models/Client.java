@@ -9,9 +9,11 @@ public class Client {
     private String phone;
     private String email;
     private String adress;
+    private String dateRegister;
+    private String numBadgework;
 
     // Constructeur :
-    public Client(String nameCompany, String dateStartWork, String firstName, String lastName, String cinpass, String phone, String email, String adress) {
+    public Client(String nameCompany, String dateStartWork, String firstName, String lastName, String cinpass, String phone, String email, String adress ,String dateRegister,String numBadgework) {
         this.nameCompany = nameCompany;
         this.dateStartWork = dateStartWork;
         this.firstName = firstName;
@@ -20,6 +22,11 @@ public class Client {
         this.phone = phone;
         this.email = email;
         this.adress = adress;
+        this.dateRegister=dateRegister;
+        this.numBadgework=numBadgework;
+    }
+    public  Client(){
+
     }
 
     // Getters & Setters :
@@ -40,10 +47,8 @@ public class Client {
     public void setEmail(String email) {this.email = email;}
     public String getAdress() {return adress;}
     public void setAdress(String adress) {this.adress = adress;}
-
-
-
-
-
-
+    public String getDateRegister() {return dateRegister;}
+    public void setDateRegister(String dateRegister) {this.dateRegister = dateRegister;}
+    public String getNumBadgework() {return numBadgework;}
+    public void setNumBadgework(String numBadgework) {this.numBadgework = numBadgework;}
 }
