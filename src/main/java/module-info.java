@@ -2,8 +2,6 @@ module com.example.brief3_mutuellecentralisee {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.google.gson;
-    requires java.sql;
-    requires jbcrypt;
 
 
     opens com.example.brief3_mutuellecentralisee to javafx.fxml, com.google.gson;

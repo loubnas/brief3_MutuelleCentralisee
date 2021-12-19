@@ -13,13 +13,21 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class jsonHelper {
+    public static List<User> GetUsersList() throws IOException, URISyntaxException {
+        String jsonText=fileHelper.ReadAllText("dataFonctionnaire.json");
+        Gson gson = new Gson();
+        // retourn le type generic collection<user>
+        Type datasetListType = new TypeToken<Collection<User>>() {}.getType();
+        //convertir le text json dans le fichier vers un objet de type List<users>
+        List<User> users = gson.fromJson(jsonText, datasetListType);
+        return users;
+
+    }
 
     public static List<CountryCode> GetPhoneCountryCodes() throws IOException, URISyntaxException {
         String jsonText=fileHelper.ReadAllText("codePays.json");
         Gson gson = new Gson();
-        // retourn le type generic collection<CountryCode>
         Type datasetListType = new TypeToken<Collection<CountryCode>>() {}.getType();
-        //convertir le text json dans le fichier vers un objet de type List<CountryCode>
         List<CountryCode> phoneCodes = gson.fromJson(jsonText, datasetListType);
         return phoneCodes;
     }
